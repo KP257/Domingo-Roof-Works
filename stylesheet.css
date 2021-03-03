@@ -1,0 +1,111 @@
+﻿body {
+    background: url('Images/construction.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+div.JobBorder {
+    border-style: solid;
+    border-color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+    nav ul li {
+        --c: grey;
+        color: var(--c);
+        font-size: 16px;
+        border-radius: 0.5em;
+        height: 3em;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: sans-serif;
+        letter-spacing: 0.1em;
+        text-align: center;
+        line-height: 3em;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transition: 0.5s;
+        margin: 1em;
+    }
+
+        nav ul li span {
+            position: absolute;
+            width: 111%;
+            height: 125%;
+            background-color: var(--c);
+            transform: translateY(150%);
+            border-radius: 50%;
+            left: 2px;
+            transition: 0.5s;
+            transition-delay: calc((var(--n) - 1) * 0.1s);
+            z-index: -1;
+    top: 2px;
+}
+
+        nav ul li:hover {
+            color: black;
+        }
+
+            nav ul li:hover span {
+                transform: translateY(0) scale(2);
+            }
+
+        nav ul li span:nth-child(1) {
+            --n: 1;
+        }
+
+        nav ul li span:nth-child(2) {
+            --n: 2;
+        }
+
+        nav ul li span:nth-child(3) {
+            --n: 3;
+        }
+
+        nav ul li span:nth-child(4) {
+            --n: 4;
+        }
+
+.button {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    border-radius: 4px;
+    background-color: darkblue;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
